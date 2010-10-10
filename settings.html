@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>One Click Orgs</title>
+	<link rel=stylesheet type=text/css href=style.css>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="logged-in">
+				<p><strong>Alex Muller</strong></p>
+				<p><a href="#">My account</a></p>
+				<p><a href="#">Logout</a></p>
+			</div>
+			<img src="images/london.png" />
+			<h1>London Hackspace</h1>
+			<p>powered by <a href="#" class="oco-link" title="0.7.0alpha (beta), running on Rails 3.0.0 ">One Click Orgs</a></p>
+		</div>
+		
+		<div id="navigation">
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Organisation Settings</a></li>
+				<li><a href="#">Constitution</a></li>
+				<li><a href="#">Members</a></li>
+			</ul>
+		</div>
+		
+		<div id="error">
+			JavaScript needs to be included for the 'Propose an amendment' buttons to work. It's not included here.
+		</div>
+		
+		<div id="content">
+
+
+	        <h2>Settings</h2>
+	        <dl class='settings'>
+	          <dt>Organisation name</dt>
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_text_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+	                  <p>
+	                    <label for='value'>
+
+	                      Change the organisation's name to:
+	                    </label>
+	                    <input name='value' value='My Special Organisation'>
+	                    <input name='name' type='hidden' value='organisation_name'>
+	                  </p>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+	                  </p>
+	                  <p>
+
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+	            London Hackspace
+	          </dd>
+	          <dt>Objectives</dt>
+
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_text_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+
+	                  <p>
+	                    <label for='value'>
+	                      Change the organisation's objectives to:
+	                    </label>
+	                    <textarea name='value'>To be awesome</textarea>
+	                    <input name='name' type='hidden' value='objectives'>
+	                  </p>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+
+	                  </p>
+	                  <p>
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+
+	            To be awesome
+	          </dd>
+	          <dt>Assets</dt>
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_assets_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+	                  <p>
+	                    Propose that the organisation should <strong>not</strong> be allowed to hold, transfer or dispose of material assets and intangible assets.
+	                  </p>
+	                  <input name='new_assets_value' type='hidden' value='0'>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+
+	                  </p>
+	                  <p>
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+
+	            The Organisation may hold, transfer and dispose of material assets and intangible assets
+	          </dd>
+	          <dt>Making decisions</dt>
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_voting_system_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+	                  <p>
+	                    <label for='general_voting_system'>Change the way decisions are made:</label>
+	                    <select name='general_voting_system'>
+	                      <option value='RelativeMajority'>More supporting votes than opposing votes</option>
+	                      <option value='AbsoluteMajority'>Supporting votes from more than half the members</option>
+
+	                      <option value='AbsoluteTwoThirdsMajority'>Supporting votes from more than two thirds of the members</option>
+	                      <option value='Unanimous'>Supporting votes from every single member</option>
+	                      <option value='Veto'>No opposing votes</option>
+	                    </select>
+	                  </p>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+
+	                  </p>
+	                  <p>
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+
+	            A decision is made if a proposal receives
+	            Supporting Votes from more than half of the Members during the Voting Period; or when more Supporting Votes than Opposing Votes have been received for the Proposal at the end of the Voting Period.
+	          </dd>
+	          <dt>Changing the constitution</dt>
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_voting_system_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+	                  <p>
+	                    <label for='constitution_voting_system'>Change the way the constitution is changed:</label>
+	                    <select name='constitution_voting_system'>
+	                      <option value='RelativeMajority'>More supporting votes than opposing votes</option>
+	                      <option value='AbsoluteMajority'>Supporting votes from more than half the members</option>
+
+	                      <option value='AbsoluteTwoThirdsMajority'>Supporting votes from more than two thirds of the members</option>
+	                      <option value='Unanimous'>Supporting votes from every single member</option>
+	                      <option value='Veto'>No opposing votes</option>
+	                    </select>
+	                  </p>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+
+	                  </p>
+	                  <p>
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+
+	            The constitution may only be amended by a decision where
+	            Supporting Votes are received from more than two thirds of Members during the Voting Period.
+	          </dd>
+	          <dt>Admitting and rejecting members</dt>
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_voting_system_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+	                  <p>
+	                    <label for='membership_voting_system'>Change the way membership decisions are made:</label>
+	                    <select name='membership_voting_system'>
+	                      <option value='RelativeMajority'>More supporting votes than opposing votes</option>
+	                      <option value='AbsoluteMajority'>Supporting votes from more than half the members</option>
+
+	                      <option value='AbsoluteTwoThirdsMajority'>Supporting votes from more than two thirds of the members</option>
+	                      <option value='Unanimous'>Supporting votes from every single member</option>
+	                      <option value='Veto'>No opposing votes</option>
+	                    </select>
+	                  </p>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+
+	                  </p>
+	                  <p>
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+
+	            New members may be appointed and exiting members ejected only by a decision where
+	            Supporting Votes are received from all Members during the Voting Period.
+	          </dd>
+	          <dt>Voting period</dt>
+	          <dd>
+	            <form accept-charset="UTF-8" action="/proposals/create_voting_period_amendment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="7tKoIUtV6ha3SdeihuznXOO6iwDHxHqgDisXpPpJc7I=" /></div>
+	              <div class='constitution_proposal'>
+	                <p class='reveal_link'>
+	                  <a href='#'>
+	                    Propose an amendment
+	                  </a>
+
+	                </p>
+	                <div class='proposal_form' style='display: none;'>
+	                  <p>
+	                    <label for='new_voting_period'>
+	                      Change the voting period to:
+	                    </label>
+	                    <select name='new_voting_period'>
+	                      <option value='1800'>  30 minutes</option>
+
+	                      <option value='86400'>  24 hours</option>
+	                      <option value='172800'>  48 hours</option>
+	                      <option selected value='259200'>  72 hours</option>
+	                      <option value='604800'>  1 week</option>
+	                      <option value='1209600'>  2 weeks</option>
+
+	                    </select>
+	                  </p>
+	                  <p>
+	                    <input id="submit" name="commit" type="submit" value="Propose change" />
+	                  </p>
+	                  <p>
+	                    <a class='cancel_link' href='#'>
+	                      Cancel
+	                    </a>
+
+	                  </p>
+	                </div>
+	              </div>
+	            </form>
+	            72 hours
+	          </dd>
+	        </dl>
+
+
+			
+		</div>
+		
+	</div>
+</body>
+</html>

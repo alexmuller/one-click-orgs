@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>One Click Orgs</title>
+	<link rel=stylesheet type=text/css href=style.css>
+	<script type="text/javascript" href="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	function pageloaded() {
+		if (!('placeholder' in document.createElement('input'))) {
+			document.getElementById('header-input').value = "Your organisation’s name";
+		}
+	}
+	function focustextfield() {
+		if (document.getElementById('header-input').value == 'Your organisation’s name') document.getElementById('header-input').value='';
+	}
+	function blurtextfield() {
+		if (!('placeholder' in document.createElement('input'))) {
+			if (document.getElementById('header-input').value == '') document.getElementById('header-input').value='Your organisation’s name';
+		}
+	}
+	</script>
+</head>
+<body onload="pageloaded();">
+	<div id="container">
+		<div id="header">
+			<div id="logged-in">
+				<p><strong>Alex Muller</strong></p>
+				<p><a href="#">My account</a></p>
+				<p><a href="#">Logout</a></p>
+			</div>
+			<img src="images/london.png" />
+			<h1 id="org-name"><!--London Hackspace--></h1>
+			<input type="text" placeholder="Your organisation’s name" class="header-h1" id="header-input" onfocus="focustextfield()" onblur="blurtextfield()" onkeypress="if (event.keyCode==13){document.getElementById('org-name').innerHTML=document.getElementById('header-input').value;document.getElementById('header-input').style.display = 'none';}" />
+			<p>powered by <a href="#" class="oco-link" title="0.7.0alpha (beta), running on Rails 3.0.0 ">One Click Orgs</a></p>
+		</div>
+		
+		<div id="navigation">
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Organisation Settings</a></li>
+				<li><a href="#">Constitution</a></li>
+				<li><a href="#">Members</a></li>
+			</ul>
+		</div>
+		
+		<div id="notice" onclick="document.getElementById('notice').style.display = 'none';">
+			Logged in
+		</div>
+		
+		<div id="error">
+			Something has exploded. Here’s how you fix it: blahdey blah blah.
+		</div>
+		
+		<div id="content">
+			<h2>My Dashboard</h2>
+			<p>Welcome back, Alex Muller! You can view and vote on proposals, as well as proposing new motions or members.</p>
+			
+			<div class="section">
+				<h3>Open Proposals</h3>
+				<p class="explanation">These proposals are currently undergoing voting by London Hackspace members.</p>
+				<table>
+					<tr>
+						<th>Title</th>
+						<th>Ends</th>
+						<th>For / against</th>
+						<th>Your vote</th>
+					</tr>
+					<tr class='odd'>
+						<td>Proposal number eight hundred</td>
+						<td class='timestamp'>Sunday 16 December 2018 at 13:34</td>
+						<td class='vote'>8 / 3</td>
+						<td>For</td>
+					</tr>
+					<tr class='even'>
+						<td>Proposal number nine hundred and three which has a really long title because the guy who created it was a giant pain in the arse</td>
+						<td class='timestamp'>Tuesday 31 Novemborg 2021 at 13:38</td>
+						<td class='vote'>3 / 4</td>
+						<td>Against</td>
+					</tr>
+					<tr class='odd to-vote'>
+						<td>Proposal number nine hundred and three</td>
+						<td class='timestamp'>Tuesday 31 June 2121 at 13:38</td>
+						<td>0 / 1</td>
+						<td class='vote'>
+							<select>
+								<option>For</option>
+								<option>Against</option>
+								<option>Abstain</option>
+							</select>
+							<input id="submit" type="submit" value="Vote" />
+						</td>
+					</tr>
+					<tr class='even'>
+						<td>Boring proposal</td>
+						<td class='timestamp'>Tuesday 31 Novemborg 2021 at 13:38</td>
+						<td class='vote'>2 / 4</td>
+						<td>Abstain</td>
+					</tr>
+				</table>
+			</div>
+			
+			<fieldset>
+				<legend>Create a new proposal</legend>
+				<form action="/proposals">
+					<p>
+						<label for="proposal_title">Title</label>
+						<input id="proposal_title" name="proposal[title]" size="30" type="text" />
+					</p>
+					<p>
+						<label for="proposal_description">Description</label>
+						<textarea cols="40" id="proposal_description" name="proposal[description]"></textarea>
+					</p>
+					<p></p>
+					<input id="submit" name="commit" type="submit" value="Create proposal" />
+				</form>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Propose a new member</legend>
+				<form action="/members">
+					<p>
+						<label for="member_email">Email address</label>
+						<input id="member_email" name="member[email]" size="30" type="text" />
+					</p>
+					<p>
+						<label for="member_firstname">First name</label>
+						<input id="member_firstname" name="member[name]" size="30" type="text" />
+					</p>
+					<p>
+						<label for="member_lastname">Last name</label>
+						<input id="member_lastname" name="member[name]" size="30" type="text" />
+					</p>
+
+				<p>
+					<label for="member_class">Class</label>
+					<select id="member_member_class_id" name="member[member_class_id]"><option value="1">Member</option>
+					<option value="2">Member</option>
+					<option value="3">Member</option>
+					<option value="4">Member</option>
+					<option value="5">Member</option>
+					<option value="6">Member</option></select>
+				</p>
+				<p>
+					<input id="submit" name="commit" type="submit" value="Add member" />
+				</p>
+				
+				</form>
+			</fieldset>
+			
+			<div class="section">
+				<h3>Recent decisions</h3>
+				<table>
+					
+					<tr>
+						<th>Decision</th>
+						<th>Date</th>
+						<th>For / against</th>
+					</tr>
+					
+					
+					
+					<tr class='odd'>
+					<td>
+					Add Francis Davey as a member of One Click Organisations
+					(
+					<a href="/members/2">Charles Armstrong</a>
+					)
+					<div class='description'>
+					</div>
+
+					<p><a href="/proposals/19">More details</a></p>
+					</td>
+					<td class='timestamp'>September 30, 2010 16:18</td>
+					<td class='vote'>3
+					/
+					0
+					</td>
+					</tr>
+					<tr class='even'>
+					<td>
+					create a dedicated github repository for the project
+					(
+					<a href="/members/2">Charles Armstrong</a>
+					)
+					<div class='description'>
+					<p>we should create a new repository at github.com/oneclickorgs</p>
+					</div>
+
+					<p><a href="/proposals/18">More details</a></p>
+					</td>
+					<td class='timestamp'>June 13, 2010 12:45</td>
+					<td class='vote'>2
+					/
+					0
+					</td>
+					</tr>
+					<tr class='odd'>
+					<td>
+					approve bloggers guild and greener classrooms as participants in the beta programme
+					(
+					<a href="/members/2">Charles Armstrong</a>
+					)
+					<div class='description'>
+					<p>i propose that the applications from bloggers' guild and greener classrooms fit one click orgs' requirements for beta groups and should be admitted to the programme.</p>
+					</div>
+
+					<p><a href="/proposals/17">More details</a></p>
+					</td>
+					<td class='timestamp'>June 01, 2010 22:14</td>
+					<td class='vote'>1
+					/
+					0
+					</td>
+					</tr>
+					<tr class='even'>
+					<td>
+					Start running manage.oneclickor.gs on the Rails version of OCO
+					(
+					<a href="/members/10">Chris Mear</a>
+					)
+					<div class='description'>
+					<p>In order to test the Rails port of OCO in the real world before releasing it to our beta customers, I propose that we start running manage.oneclickor.gs on the Rails version of OCO immediately.</p>
+					</div>
+
+					<p><a href="/proposals/16">More details</a></p>
+					</td>
+					<td class='timestamp'>April 19, 2010 18:22</td>
+					<td class='vote'>5
+					/
+					0
+					</td>
+					</tr>
+					<tr class='odd'>
+					<td>
+					Make the Rails port our master development branch
+					(
+					<a href="/members/10">Chris Mear</a>
+					)
+					<div class='description'>
+					<p>I believe the Rails port of OCO is ready to become our main branch of development.
+					</p>
+					<p>
+					</p>
+					<p>Therefore I propose:
+					</p>
+					<p>
+					</p>
+					<p>that we merge the rails3 branch into our master branch;
+					</p>
+					<p>
+					</p>
+					<p>that we do new development work on the new Rails-based master branch;
+					</p>
+					<p>
+					</p>
+					<p>and that we maintain a v0.5.x Merb-based branch for fixes to that version before the Rails branch is ready for general release.
+					</p>
+					<p>
+					</p>
+					<p>More information and discussion here:
+					</p>
+					<p>http://groups.google.co.uk/group/oneclickorgs-gov/browse_thread/thread/f3bce1fb538c59cb</p>
+					</div>
+
+					<p><a href="/proposals/15">More details</a></p>
+					</td>
+					<td class='timestamp'>April 19, 2010 18:22</td>
+					<td class='vote'>5
+					/
+					0
+					</td>
+					</tr>
+					
+					
+					
+					
+				</table>
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+</html>

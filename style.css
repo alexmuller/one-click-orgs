@@ -1,0 +1,262 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f6f6f6;
+	font-family: 'Myriad', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+}
+
+a {
+	color: #627FC4;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #8f2525;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+#container {
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 12px;
+	width: 960px;
+}
+
+#header {
+	border-bottom: 1px solid #999;
+	padding: 6px 0;
+}
+
+#header img {
+	float: left;
+	height: 64px;
+	margin-left: 12px;
+	margin-right: 18px;
+	width: 64px;
+}
+
+#header h1, input.header-h1 {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 38px;
+	margin-bottom: 2px;
+}
+
+input.header-h1 {
+	margin-bottom: 4px;
+	padding: 2px 6px;
+	width: 600px;
+}
+
+#header p, #header p a.oco-link {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+#header #logged-in {
+	float: right;
+}
+
+#header #logged-in p {
+	font-size: 12px;
+	margin: 0;
+	text-align: right;
+}
+
+#navigation {
+	margin: 12px 0;
+}
+
+#navigation ul {
+	display: inline;
+}
+
+#navigation ul li {
+	display: inline;
+	list-style: none;
+	padding-right: 80px;
+}
+
+#notice, #error {
+	font-size: 14px;
+	margin-bottom: 4px;
+	padding: 12px;
+}
+
+#notice {
+	background-color: #c9dcc0;
+	cursor: pointer;
+}
+
+#error {
+	background-color: #df4242;
+}
+
+#content {
+	margin-top: 16px;
+}
+
+#content p {
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+#content p.explanation {
+	color: #666;
+}
+
+#content ul {
+	margin: 0 0 12px 24px;
+}
+
+#content ul li {
+	margin: 4px 0;
+}
+
+#content div.section, #content fieldset {
+	background: #f5f5fe;
+	border: 1px solid #999;
+	margin-bottom: 18px;
+	padding: 12px;
+}
+
+#content fieldset legend {
+	font-weight: bold;
+	font-size: 20px;
+	padding: 0 8px;
+}
+
+#content fieldset input, #content fieldset textarea, #content fieldset label, #content fieldset select {
+	font-size: 14px;
+}
+
+#content fieldset input, #content fieldset textarea {
+	border: 1px solid #333;
+	padding: 3px;
+	width: 600px;
+}
+
+#content fieldset textarea {
+	height: 180px;
+}
+
+#content fieldset select {
+	width: 200px;
+}
+
+#content fieldset input:hover, #content fieldset textarea:hover,
+#content fieldset input:focus, #content fieldset textarea:focus {
+	background-color: #f6f6f6;
+}
+
+#content fieldset label {
+	display: inline-block;
+	line-height: 2;
+	vertical-align: top;
+	width: 160px;
+}
+
+#content fieldset input#submit {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #c9dcc0;
+	margin-left: 160px;
+	width: 200px;
+}
+
+#content fieldset input#submit:hover {
+	background-color: #a1c2a3;
+}
+
+/* Tables */
+
+table {
+	border-collapse: collapse;
+	margin: 12px 0 24px 0;
+	text-align: left;
+}
+
+table th {
+	border-bottom: 1px dashed #ccc;
+	white-space: nowrap;
+}
+
+table th, table td {
+	padding: 8px 18px;
+}
+
+table td.timestamp, table td.vote {
+	white-space: nowrap;
+}
+
+#content table div.description p {
+	font-size: 12px;
+	margin: 6px 0;
+	width: 80%;
+}
+
+table tr.even td {
+	background: #e9e9f4;
+}
+
+table select {
+	margin-right: 3px;
+	width: 80px;
+}
+
+dt {
+	clear: right;
+	font-weight: 700;
+	margin-top: 12px;
+}
+
+dd {
+	margin-bottom: 12px;
+	padding: 12px;
+}
+
+dd div.constitution_proposal {
+	background-color: #f6f6f6;
+	float: right;
+	padding: 6px;
+	margin: 6px 0 6px 24px;
+	width: 33%;
+}
+
+#content dd div.constitution_proposal p {
+	margin: 0;
+}
+
+#content dd div.constitution_proposal select {
+	margin: 6px 0;
+	width: 100%;
+}
+
+#content dd div.constitution_proposal a.cancel_link {
+	color: #a71414;
+	font-size: 12px;
+}
+
+
+
+table.members td {
+	width: 280px;
+}

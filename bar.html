@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>One Click Orgs</title>
+	<link rel=stylesheet type=text/css href=style.css>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<style type="text/css">
+				#induction-bar {
+					background-color: #e0d341;
+					background: -moz-linear-gradient(100% 100% 90deg, #ba9532, #e0d341);
+					background: -webkit-gradient(linear, left bottom, left top, from(#ba9532), to(#e0d341));
+					border-bottom: 1px solid #111;
+					border-left: 1px solid #111;
+					border-right: 1px solid #111;
+					margin: -18px -12px 12px;
+				}
+				#induction-bar a {
+					background: #333;
+					background: rgba(0, 0, 0, 0.6);
+					-webkit-border-radius: 2px;
+					-moz-border-radius: 2px;
+					border-radius: 2px;
+					border: 1px solid #000;
+					color: #fff;
+					margin: 0 2px;
+					padding: 4px 8px;
+					text-shadow: none;
+				}
+				#induction-bar a:hover {
+					background: #444;
+					background: rgba(0, 0, 0, 0.8);
+					text-decoration: none;
+				}
+				#induction-bar p {
+					color: #000;
+					font-size: 1em;
+					margin: 0;
+					padding: 12px 0;
+					text-align: center;
+					text-shadow: #fff -1px -1px 2px;
+				}
+				#induction-bar a.create {
+					background: #1a901a;
+					border: 1px solid #000;
+				}
+				#induction-bar a.create:hover {
+					background: #1a721a;
+				}
+			</style>
+			<div id="induction-bar">
+				<p>London Hackspace is under construction. <a href="#">Check your constitution</a>, then <a href="#">invite founding members</a> and finally <a href="#" class="create">create the association</a>.</p>
+			</div>
+			<div id="logged-in">
+				<p><strong>Alex Muller</strong></p>
+				<p><a href="#">My account</a></p>
+				<p><a href="#">Logout</a></p>
+			</div>
+			<img src="images/london.png" />
+			<h1 id="org-name">London Hackspace</h1>
+			<p>powered by <a href="#" class="oco-link" title="0.7.0alpha (beta), running on Rails 3.0.0 ">One Click Orgs</a></p>
+		</div>
+		
+		<div id="navigation">
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Organisation Settings</a></li>
+				<li><a href="#">Constitution</a></li>
+				<li><a href="#">Members</a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<h2>My Dashboard</h2>
+			<p>Welcome back, Alex Muller! You can view and vote on proposals, as well as proposing new motions or members.</p>
+						
+			<div class="section open-proposals">
+				<h3>Open proposals</h3>
+				<p class="explanation">These proposals are currently undergoing voting by London Hackspace members.</p>
+				<h4>Proposal title goes here <span class="time-ends">(voting ends Tuesday 18 December 2012 at 17:34)</span></h4>
+				<p class="votes">8 votes for, 3 against</p>
+				<select>
+					<option>For</option>
+					<option>Against</option>
+					<option>Abstain</option>
+				</select>
+				<input id="submit" type="submit" value="Vote" />
+				
+				<h4>My proposal title right here <span class="time-ends">(voting ends Wednesday 18 June 2014 at 17:34)</span></h4>
+				<p class="votes">137 votes for, 343 against</p>
+				<p>You voted <strong>for</strong> this proposal</p>
+				
+				<h4>My proposal title right in here <span class="time-ends">(voting ends Wednesday 18 June 2014 at 17:34)</span></h4>
+				<p class="votes">14 votes for, 43 against</p>
+				<input class="votebutton" type="button" value="For" /><input class="votebutton" type="button" value="Against" />
+				
+				<h4>My proposal right in here <span class="time-ends">(voting ends Wednesday 18 June 2014 at 17:34)</span></h4>
+				<p class="votes">14 votes for, 4 against</p>
+				<input class="votebutton" type="button" value="For" /><input class="votebutton" type="button" value="Against" />
+			</div>
+			
+			<fieldset>
+				<legend>Create a new proposal</legend>
+				<form action="/proposals">
+					<p>
+						<label for="proposal_title">Title</label>
+						<input id="proposal_title" name="proposal[title]" size="30" type="text" />
+					</p>
+					<p>
+						<label for="proposal_description">Description</label>
+						<textarea cols="40" id="proposal_description" name="proposal[description]"></textarea>
+					</p>
+					<p></p>
+					<input id="submit" name="commit" type="submit" value="Create proposal" />
+				</form>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Propose a new member</legend>
+				<form action="/members">
+					<p>
+						<label for="member_email">Email address</label>
+						<input id="member_email" name="member[email]" size="30" type="text" />
+					</p>
+					<p>
+						<label for="member_firstname">First name</label>
+						<input id="member_firstname" name="member[name]" size="30" type="text" />
+					</p>
+					<p>
+						<label for="member_lastname">Last name</label>
+						<input id="member_lastname" name="member[name]" size="30" type="text" />
+					</p>
+
+				<p>
+					<label for="member_class">Class</label>
+					<select id="member_member_class_id" name="member[member_class_id]"><option value="1">Member</option>
+					<option value="2">Member</option>
+					<option value="3">Member</option>
+					<option value="4">Member</option>
+					<option value="5">Member</option>
+					<option value="6">Member</option></select>
+				</p>
+				<p>
+					<input id="submit" name="commit" type="submit" value="Add member" />
+				</p>
+				
+				</form>
+			</fieldset>
+			
+			<div class="section">
+				<h3>Recent decisions</h3>
+				<table>
+					
+					<tr>
+						<th>Decision</th>
+						<th>Date</th>
+						<th>For / against</th>
+					</tr>
+					
+					
+					
+					<tr class='odd'>
+					<td>
+					Add Freddie as a member of London Hackspace
+					(
+					<a href="/members/2">Charles</a>
+					)
+					<div class='description'>
+					</div>
+
+					<p><a href="/proposals/19">More details</a></p>
+					</td>
+					<td class='timestamp'>September 30, 2110 14:18</td>
+					<td class='vote'>4
+					/
+					7
+					</td>
+					</tr>
+					<tr class='even'>
+					<td>
+					create a dedicated github repository for something
+					(
+					<a href="/members/2">Charles</a>
+					)
+					<div class='description'>
+					<p>we should create a new repository at github.com</p>
+					</div>
+
+					<p><a href="/proposals/18">More details</a></p>
+					</td>
+					<td class='timestamp'>June 13, 2010 12:45</td>
+					<td class='vote'>2
+					/
+					0
+					</td>
+					</tr>
+					<tr class='odd'>
+					<td>
+					approve something
+					(
+					<a href="/members/2">Charles</a>
+					)
+					<div class='description'>
+					<p>i propose that blah blah blah.</p>
+					</div>
+
+					<p><a href="/proposals/17">More details</a></p>
+					</td>
+					<td class='timestamp'>June 01, 2310 22:14</td>
+					<td class='vote'>6
+					/
+					2
+					</td>
+					</tr>
+					<tr class='even'>
+					<td>
+					Start running London Hackspace on the Rails version of OCO
+					(
+					<a href="/members/10">Chris</a>
+					)
+					<div class='description'>
+					<p>In order to test the Rails port of OCO in the real world before releasing it to our beta customers, I propose that we start running it. In order to the Rails port of OCO in the real world before releasing it to our beta, I London that we start running it. In to the Rails port of OCO in the London before releasing it to our beta customers, I propose that we start running it.</p>
+					</div>
+
+					<p><a href="/proposals/16">More details</a></p>
+					</td>
+					<td class='timestamp'>April 19, 2009 18:22</td>
+					<td class='vote'>5
+					/
+					4
+					</td>
+					</tr>
+					
+					
+					
+					
+				</table>
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+</html>

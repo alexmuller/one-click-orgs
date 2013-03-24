@@ -1,11 +1,18 @@
-= link_to(image_tag('oco-logo-24.png', :height => '24', :width => '24', :alt => 'One Click Orgs logo', :class => 'logo') + 'One Click Orgs', 'http://www.oneclickorgs.com/', :target => '_blank', :title => "Version #{OneClickOrgs.version}")
-\ &bull;
-%a{:href => 'http://www.oneclickorgs.com/faq/'} Frequently asked questions
+%span.left
+  %ol.footer-points
+    %li
+      = link_to(image_tag('oco-logo-24.png', :height => '24', :width => '24', :alt => 'One Click Orgs logo', :class => 'logo') + 'One Click Orgs', 'http://www.oneclickorgs.com/', :target => '_blank', :title => "OCO version #{OneClickOrgs.version}")
+    %li
+      %a{:href => 'http://www.oneclickorgs.com/faq/', :target => '_blank'} Frequently asked questions
 
 %span.right
-  Licensed under the
-  %a{:href => 'http://www.gnu.org/licenses/agpl.html', :target => '_blank'} AGPL
-  \ &bull;
-  %a{:href => 'http://github.com/oneclickorgs/one-click-orgs', :target => '_blank'} Source code available
-  \ &bull;
-  = link_to image_tag('os_80x24_blue.png', :width => 80, :height => 24, :alt => 'This is an Open Software Service'), 'http://www.opendefinition.org/software-service/', :target => '_blank'
+  %ol.footer-points
+    %li
+      Licensed under the
+      %a{:href => 'http://www.gnu.org/licenses/agpl.html', :target => '_blank'} AGPL
+    %li
+      %a{:href => 'http://github.com/oneclickorgs/one-click-orgs', :target => '_blank'} Source code available
+    %li
+      = link_to image_tag('os_80x24_blue.png', :width => 80, :height => 24, :alt => 'This is an Open Software Service'), 'http://www.opendefinition.org/software-service/', :target => '_blank'
+
+%br.clear

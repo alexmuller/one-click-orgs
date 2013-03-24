@@ -1,0 +1,61 @@
+#control_bar
+  :float right
+  :font-size 0.75em
+  :line-height 1.35em
+  :text-align right
+  ol
+    :list-style none
+  a
+    :text-decoration none
+
+#hd
+  :border-bottom 1px solid #999
+  :margin-bottom 12px
+
+#credit_link
+  :color #666
+  :font-size 0.75em
+  :margin 2px 0
+  a
+    :color #666
+    :text-decoration none
+    &:hover
+      :color $oco_burgundy
+      :text-decoration underline
+
+#header
+  :font-family $default-serif
+  :font-size 2.25em
+  :line-height 1em
+  a
+    :color #000
+    :text-decoration none
+    &:hover
+      :text-decoration underline
+
+// Navigation
+
+#nav
+  :margin 12px 0
+
+#navitem
+  :display inline
+  :padding-right 3em
+  a
+    :text-decoration none
+    &:hover
+      :text-decoration underline
+
+// Notices and errors
+
+#notice, #error
+  :font-size 0.85em
+  :margin 12px 0
+  :padding 12px
+
+#notice
+  :background #C9DCC0
+
+#error
+  :background $error_red
+  :color #fff

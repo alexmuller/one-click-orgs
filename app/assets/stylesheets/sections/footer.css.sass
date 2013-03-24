@@ -1,0 +1,27 @@
+.footer
+  :border-top 1px solid #000
+  :clear both
+  :color #666
+  :font-size .75em
+  :margin-top 1em
+  :padding 1em 0
+  span.left
+    :float left
+  span.right
+    :float right
+  ol.footer-points
+    :list-style none
+    :margin 0
+    li
+      :display inline
+      &::after
+        :content "\a0\2022\a0"
+      &:last-child::after
+        :content ""
+  a
+    :text-decoration none
+  img
+    :vertical-align middle
+    &.logo
+      :margin-right 4px
+

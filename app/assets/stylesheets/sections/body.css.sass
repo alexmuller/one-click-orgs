@@ -1,0 +1,90 @@
+#bd
+  a
+    &.cancel
+      :color #f00
+  p
+    :color #333
+    :margin-bottom 1em
+    &.helper
+      :font-size 0.9em
+  .section
+    :background lighten($pale_blue, 4)
+    :border 1px solid #999
+    :margin-bottom 1.5em
+    :padding 1em
+    p.explanation
+      :color #666
+    &.open-proposals
+      > h4
+        :margin 0.8em 0 0.4em
+      span.time-ends
+        :color #666
+        :font-size 0.8em
+        :font-weight normal
+      p.votes
+        :float left
+        :margin-right 24px
+  // We style Markdown in proposal descriptions
+  section.description
+    :background lighten($pale_blue, 9)
+    :border darken($pale_blue, 3)
+    @include border-radius(4px)
+    :margin 1em 0
+    :padding 0.6em
+    :font-size 0.8em
+    &.missing
+      :border-left 0
+      p
+        :color #666
+    h1, h2, h3, h4
+      :color #666
+      :margin 0.4em 0
+    h1
+      :color #333
+      :font-size 1.4em
+    h2
+      :color #333
+      :font-size 1.2em
+    h3, h4
+      :font-size 1.1em
+    p
+      :line-height 1.4em
+    ul, ol
+      :margin 0.4em 2em
+    blockquote
+      :border-left 1px solid #666
+      :margin-left 2em
+      :padding-left 1em
+  .comment
+    :background #f6f6f6
+    :border 1px solid #666
+    :margin 0 0 1.6em 0
+    :padding 0.4em
+
+img.gravatar
+  @include border-radius(2px)
+  :margin-left 2px
+  :margin-right 2px
+  :vertical-align middle
+
+#download
+  :font-size 0.75em
+  :margin 0.5em 0
+  span.download
+    :margin-left 2px
+    a
+      @include border-radius(2px)
+      :background #999
+      :padding 5px 6px 4px 6px
+      :color #fff
+      :text-decoration none
+    &.pdf a
+      :background $file_pdf
+      :color #fff
+      &:hover
+        :background darken($file_pdf, 8)
+    &.csv a
+      :background $file_csv
+      :color #fff
+      &:hover
+        :background darken($file_csv, 8)
